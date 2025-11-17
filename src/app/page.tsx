@@ -66,14 +66,14 @@ export default function Home() {
               {locationDetails.tagline}
             </p>
           </div>
-          <div className="flex items-center max-lg:justify-end lg:gap-8 gap-4">
+          <div className="flex items-center max-lg:justify-end lg:gap-8 gap-4 max-lg:p-1">
             {reviewBadges.map((badge, i) => (
               <Image key={i} src={badge.src} alt={badge.alt} className="lg:p-1 p-0 max-lg:h-6 w-auto" />
             ))}
           </div>
         </header>
 
-        <div className="grid gap-8 lg:grid-cols-[1.10fr_0.9fr] lg:px-8 mt-4">
+        <div className="grid gap-8 lg:grid-cols-[1.10fr_0.9fr] lg:px-8 lg:mt-4">
           <section className="lg:flex flex-col grid grid-cols-[3fr_4fr] overflow-hidden rounded-2xl border border-slate-200 bg-white">
             <div className="relative">
               <Image
