@@ -27,8 +27,8 @@ const locationDetails = {
 
 const reviewBadges = [
   { src: BBB, alt: "BBB" },
-  { src: Google, alt: "Trustpilot" },
-  { src: TrustPilot, alt: "Google" },
+  { src: TrustPilot, alt: "Trustpilot" },
+  { src: Google, alt: "Google" },
 ];
 
 const includedFeatures = [
@@ -68,12 +68,12 @@ export default function Home() {
           </div>
           <div className="flex items-center max-lg:justify-end lg:gap-8 gap-4">
             {reviewBadges.map((badge, i) => (
-              <Image key={i} src={badge.src} alt={badge.alt} className="p-1" />
+              <Image key={i} src={badge.src} alt={badge.alt} className="lg:p-1 p-0 max-lg:h-6 w-auto" />
             ))}
           </div>
         </header>
 
-        <div className="grid gap-8 lg:grid-cols-[1.10fr_0.9fr] lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1.10fr_0.9fr] lg:px-8 mt-4">
           <section className="lg:flex flex-col grid grid-cols-[3fr_4fr] overflow-hidden rounded-2xl border border-slate-200 bg-white">
             <div className="relative">
               <Image
@@ -112,7 +112,7 @@ export default function Home() {
                   {locationDetails.phone}
                 </div>
                 <div className="text-right">
-                  <p className="text-4xl font-bold text-white">{locationDetails.rate}</p>
+                  <p className="text-[48px] font-bold text-white">{locationDetails.rate}</p>
                 </div>
               </div>
 
@@ -150,57 +150,57 @@ export default function Home() {
             </div>
           </section>
 
-          <aside className="text-secondary text-[16px]">
-            <p className="">
-              When We Say <span className="font-semibold">All-inclusive,</span> <br />
-              We Mean <span className="font-semibold">ALL-INCLUSIVE:</span>
-            </p>
-            <ul className="space-y-3 mt-4 lg:hidden">
-              {mobileFeatures.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center gap-4 text-[16px] text-slate-700 font-normal"
-                >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-icon-background text-cta">
-                    <Check size={20} />
-                  </span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <ul className="space-y-3 mt-4 hidden lg:block">
-              {includedFeatures.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center gap-4 text-[16px] text-slate-700 font-normal"
-                >
-                  <span className="flex h-6 w-6 lg:h-8 lg:w-8 items-center justify-center rounded-full bg-icon-background text-cta">
-                    <Check className="size-6" />
-                  </span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            {!showAllFeatures && includedFeatures.length > 3 && (
-              <button
-                onClick={() => setShowAllFeatures(true)}
-                className="mt-4 flex lg:hidden items-center gap-2 text-secondary-text hover:opacity-80 transition"
-              >
-                <ChevronsDown className="size-6" />
-                <span>See All Features</span>
-              </button>
-            )}
-
-            <div className="lg:block hidden">
-              <p className="text-xl py-14">
-                All for only <span className="text-accent-primary font-bold">$99</span>/month
+          <aside className="flex flex-col justify-between text-secondary text-[16px]">
+            <div>
+              <p>
+                When We Say <span className="font-semibold">All-inclusive,</span> <br />
+                We Mean <span className="font-semibold">ALL-INCLUSIVE:</span>
               </p>
-              <button className="w-full rounded-lg items-center justify-center bg-cta py-4 font-semibold text-[18px] text-white border-cta border cursor-pointer">
-                Select This Location
-              </button>
+              <ul className="space-y-3 mt-4 lg:hidden">
+                {mobileFeatures.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-4 text-[16px] text-slate-700 font-normal"
+                  >
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-icon-background text-cta">
+                      <Check size={20} />
+                    </span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="space-y-3 mt-4 hidden lg:block">
+                {includedFeatures.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-4 text-[16px] text-slate-700 font-normal"
+                  >
+                    <span className="flex h-6 w-6 lg:h-8 lg:w-8 items-center justify-center rounded-full bg-icon-background text-cta">
+                      <Check className="size-6" />
+                    </span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {!showAllFeatures && includedFeatures.length > 3 && (
+                <button
+                  onClick={() => setShowAllFeatures(true)}
+                  className="mt-4 flex lg:hidden items-center gap-2 text-secondary-text hover:opacity-80 transition"
+                >
+                  <ChevronsDown className="size-6" />
+                  <span>See All Features</span>
+                </button>
+              )}
             </div>
+
+            <p className="lg:block hidden text-xl">
+              All for only <span className="text-accent-primary font-bold">$99</span>/month
+            </p>
+            <button className="lg:block hidden w-full rounded-lg items-center justify-center bg-cta py-4 font-semibold text-[18px] text-white border-cta border cursor-pointer">
+              Select This Location
+            </button>
           </aside>
         </div>
       </div>
