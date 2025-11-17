@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --body-background: #f5f7fb;
+  --body-foreground: #0f172a;
+  --body-min-height: 100vh;
+  --muted-text: #717680;
+  --link-text: #026aa2;
+  --control-text: #414651;
+  --accent-primary: #0086c9;
+  --accent-muted: #e9eaeb;
+  --cta-accent: #36bffa;
+  --secondary-text: #475467;
+  --icon-background: #e0f2fe;
+  --button-surface: #ffffff;
+  --button-border: #d5d7da;
+  --shadow-surface: #0a0d120d;
+  --shadow-surface-strong: #0a0d122e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-body-background: var(--body-background);
+  --color-body-foreground: var(--body-foreground);
+  --size-body-min-height: var(--body-min-height);
+  --color-muted: var(--muted-text);
+  --color-link: var(--link-text);
+  --color-control: var(--control-text);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-muted: var(--accent-muted);
+  --color-cta: var(--cta-accent);
+  --color-secondary: var(--secondary-text);
+  --color-icon-background: var(--icon-background);
+  --color-button-surface: var(--button-surface);
+  --color-button-border: var(--button-border);
+  --color-shadow-surface: var(--shadow-surface);
+  --color-shadow-surface-strong: var(--shadow-surface-strong);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  margin: 0;
+  min-height: var(--body-min-height);
+  font-family: var(--font-geist-sans), "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: var(--body-background);
+  color: var(--body-foreground);
+  -webkit-font-smoothing: antialiased;
+}
