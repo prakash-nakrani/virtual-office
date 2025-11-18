@@ -53,11 +53,11 @@ export default function Home() {
         <header className="lg:flex block justify-between lg:py-3 py-2 lg:px-8 max-lg:space-y-2">
           <div className="space-y-2">
             <nav className="flex flex-wrap items-center gap-2 text-sm text-muted font-semibold">
-              <span>Locations</span>
+              <span className="hover:font-semibold hover:text-link">Locations</span>
               <span className="text-slate-300"><ChevronRight size={16} /></span>
-              <span>{locationDetails.state}</span>
+              <span className="hover:font-semibold hover:text-link">{locationDetails.state}</span>
               <span className="text-slate-300"><ChevronRight size={16} /></span>
-              <span className="font-semibold text-link">{locationDetails.city}</span>
+              <span className="hover:font-semibold hover:text-link">{locationDetails.city}</span>
             </nav>
             <h1 className="text-xl md:text-3xl font-medium text-slate-900 sm:text-4xl lg:text-5xl">
               Virtual office in <span className="text-sky-500">{locationDetails.city}</span>
