@@ -20,7 +20,7 @@ const locationDetails = {
   city: "{city}",
   addressLineOne: "200 E Robinson Street, Suite 1120",
   addressLineTwo: "{city} {state}32801",
-  phone: "(407) 559-2000",
+  phone: "(407) 559 - 2000",
   rate: "$99/mo",
   tagline: "{city} Virtual Business Address & Live Receptionist Answering Service",
 };
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
           <div className="flex items-center max-lg:justify-end lg:gap-8 gap-4 max-lg:p-1">
             {reviewBadges.map((badge, i) => (
-              <Image key={i} src={badge.src} alt={badge.alt} className="lg:p-1 p-0 max-lg:h-6 w-auto" />
+              <Image key={i} src={badge.src} alt={badge.alt} className="lg:p-1 p-0 lg:h-auto h-6 w-auto" />
             ))}
           </div>
         </header>
@@ -122,7 +122,7 @@ export default function Home() {
               <p className="lg:text-3xl text-sm font-semibold leading-tight sm:text-4xl">
                 {locationDetails.city}, {locationDetails.stateShort}
               </p>
-              <div className="text-xs text-white/95 leading-7 py-4">
+              <div className="text-sm text-white/95 py-4">
                 {locationDetails.addressLineOne} <br />
                 {locationDetails.addressLineTwo} <br />
                 {locationDetails.phone}
@@ -139,7 +139,7 @@ export default function Home() {
                 </div>
               </div>
               <button
-                className="mt-2 flex w-full items-center justify-center rounded-2xl border border-button-border bg-button-surface py-4 text-sm font-semibold text-control transition hover:opacity-90"
+                className="mt-2 flex w-full items-center justify-center rounded-md border border-button-border bg-button-surface py-2 text-sm font-semibold text-control transition hover:opacity-90"
                 style={{
                   boxShadow:
                     "0px 1px 2px 0px var(--color-shadow-surface), 0px -2px 0px 0px var(--color-shadow-surface) inset, 0px 0px 0px 1px var(--color-shadow-surface-strong) inset",
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
           </section>
 
-          <aside className="flex flex-col justify-between text-secondary text-[16px]">
+          <aside className="flex flex-col justify-between text-secondary text-[16px] lg:w-[360px] lg:shrink-0">
             <div>
               <p>
                 When We Say <span className="font-semibold">All-inclusive,</span> <br />
